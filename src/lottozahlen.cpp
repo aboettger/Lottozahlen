@@ -6,7 +6,6 @@
  */
 
 #include <algorithm>
-#include <cstdlib>
 #include <iostream>
 #include <random>
 #include <vector>
