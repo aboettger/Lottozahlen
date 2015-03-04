@@ -29,9 +29,9 @@ main (int argc, char **argv)
 	{
 	  flag = false;
 	  lottozahl = dist1to49 (engine);
-	  for (std::vector<int>::size_type j = 0; j < lottozahlen.size (); ++j)
+	  for (auto& value : lottozahlen)
 	    {
-	      if (lottozahlen[j] == lottozahl)
+	      if (value == lottozahl)
 		{
 		  flag = true;
 		  break;
@@ -45,9 +45,9 @@ main (int argc, char **argv)
   std::sort (lottozahlen.begin (), lottozahlen.end ());
 
   std::cout << "Lottozahlen: ";
-  for (std::vector<int>::size_type i = 0; i < lottozahlen.size (); ++i)
+  for (auto& value : lottozahlen)
     {
-      std::cout << lottozahlen[i] << " ";
+      std::cout << value << " ";
     }
 
   std::cout << std::endl;
