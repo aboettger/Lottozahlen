@@ -20,6 +20,7 @@ main (int argc, char **argv)
   std::mt19937 engine (rd ());
   std::uniform_int_distribution<int> dist (1, 49);
   std::vector<int> lottozahlen;
+
   for (int i = 0; i < MAX_LOTTOZAHLEN; ++i)
     {
       bool flag = false;
