@@ -7,8 +7,7 @@
 
 #include "Lotto.h"
 
-#include <algorithm>
-#include <random>
+#include <initializer_list>
 
 std::random_device rd;
 std::mt19937 engine (rd ());
@@ -25,7 +24,7 @@ Lotto::~Lotto ()
 }
 
 auto
-Lotto::getLottozahlen () -> std::vector<int>
+Lotto::getLottozahlen () -> decltype(lottozahlen)
 {
   return (lottozahlen);
 }
@@ -63,7 +62,7 @@ Lotto::refresh ()
 }
 
 auto
-Lotto::getZusatzzahl ()-> int
+Lotto::getZusatzzahl ()-> decltype (dist0to9 (engine))
 {
   return (dist0to9 (engine));
 }
