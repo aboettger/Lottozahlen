@@ -20,11 +20,11 @@ public:
 //  Lotto (const Lotto& a);   // Copy-Konstruktor
   ~Lotto ();                     // der Destruktor
 
-  std::vector<int>
-  getLottozahlen ();     // eine Funktion mit einem (Default-) Parameter
+  auto
+  getLottozahlen () -> std::vector<int>;     // eine Funktion mit einem (Default-) Parameter
 
-  int
-  getZusatzzahl ();
+  auto
+  getZusatzzahl () -> int;
 
   void
   refresh ();

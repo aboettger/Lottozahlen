@@ -24,8 +24,8 @@ Lotto::~Lotto ()
 {
 }
 
-std::vector<int>
-Lotto::getLottozahlen ()
+auto
+Lotto::getLottozahlen () -> std::vector<int>
 {
   return (lottozahlen);
 }
@@ -62,8 +62,8 @@ Lotto::refresh ()
 //  std::sort (lottozahlen.begin (), lottozahlen.end ());
 }
 
-int
-Lotto::getZusatzzahl ()
+auto
+Lotto::getZusatzzahl ()-> int
 {
   return (dist0to9 (engine));
 }
