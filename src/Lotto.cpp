@@ -37,8 +37,8 @@ Lotto::refresh ()
     {};
   for (std::size_t i = 0; i < this->MAX_LOTTOZAHLEN; ++i)
     {
-      bool flag = false;
-      int lottozahl = 0;
+      auto flag = false;
+      auto lottozahl = 0;
       do
 	{
 	  flag = false;
