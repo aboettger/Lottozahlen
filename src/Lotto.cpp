@@ -43,7 +43,7 @@ Lotto::refresh ()
 	{
 	  flag = false;
 	  lottozahl = dist1to49 (engine);
-	  for (auto& value : lottozahlen)
+	  for (auto value : lottozahlen)
 	    {
 	      if (value == lottozahl)
 		{
