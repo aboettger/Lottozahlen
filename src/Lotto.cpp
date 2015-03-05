@@ -33,7 +33,8 @@ Lotto::getLottozahlen ()
 void
 Lotto::refresh ()
 {
-  lottozahlen = {};
+  lottozahlen =
+    {};
   for (std::size_t i = 0; i < this->MAX_LOTTOZAHLEN; ++i)
     {
       bool flag = false;
@@ -54,7 +55,11 @@ Lotto::refresh ()
       while (flag);
       lottozahlen.push_back (lottozahl);
     }
-  std::sort (lottozahlen.begin (), lottozahlen.end ());
+
+  std::sort (lottozahlen.begin (), lottozahlen.end (), [](int a, int b)
+	{ return (a<b);});
+//  auch möglich:
+//  std::sort (lottozahlen.begin (), lottozahlen.end ());
 }
 
 int
