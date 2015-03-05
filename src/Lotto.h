@@ -16,10 +16,10 @@
 class Lotto
 {
 protected:
-  std::size_t const MAX_LOTTOZAHLEN = 6;
+  // Direkte Initialisierung, Kopierinitialisierung: std::size_t const MAX_LOTTOZAHLEN = 6;
+  std::size_t const MAX_LOTTOZAHLEN
+    { 6 };
   std::vector<int> lottozahlen;
-
-
 
 public:
   Lotto ();                      // der Default-Konstruktor
