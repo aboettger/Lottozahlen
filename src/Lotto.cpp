@@ -7,8 +7,8 @@
 
 #include "Lotto.h"
 
-#include <algorithm>
-#include <random>
+#include <initializer_list>
+#include <iostream>
 
 std::random_device rd;
 std::mt19937 engine (rd ());
@@ -24,8 +24,8 @@ Lotto::~Lotto ()
 {
 }
 
-std::vector<int>
-Lotto::getLottozahlen ()
+auto
+Lotto::getLottozahlen () -> decltype(lottozahlen)
 {
   return (lottozahlen);
 }
@@ -37,22 +37,30 @@ Lotto::refresh ()
     {};
   for (std::size_t i = 0; i < this->MAX_LOTTOZAHLEN; ++i)
     {
-      auto flag = false;
+      auto isExisting = false;
       auto lottozahl = 0;
+      auto j = 0;
+
       do
 	{
-	  flag = false;
+	  ++j;
+	  isExisting = false;
 	  lottozahl = dist1to49 (engine);
+
 	  for (auto value : lottozahlen)
 	    {
 	      if (value == lottozahl)
 		{
-		  flag = true;
+		  isExisting = true;
 		  break;
 		}
 	    }
+
 	}
-      while (flag);
+      // Wiederholung, wenn Zahl schon existiert (isExisting) oder mehr Zahlen (MAX_LOTTOZAHLEN)
+      // angefordert werden, als geliefert werden können (dist1to49.max())
+      while (isExisting && j < dist1to49.max ());
+
       lottozahlen.push_back (lottozahl);
     }
 
@@ -62,8 +70,8 @@ Lotto::refresh ()
 //  std::sort (lottozahlen.begin (), lottozahlen.end ());
 }
 
-int
-Lotto::getZusatzzahl ()
+auto
+Lotto::getZusatzzahl ()-> decltype (dist0to9 (engine))
 {
   return (dist0to9 (engine));
 }

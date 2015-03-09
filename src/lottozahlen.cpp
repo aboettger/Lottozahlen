@@ -17,7 +17,6 @@ int
 main (int argc, char **argv)
 {
   Lotto lotto;
-  lotto.refresh ();
   std::cout << "Lottozahlen: ";
   for (auto value : lotto.getLottozahlen ())
     {

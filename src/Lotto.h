@@ -9,10 +9,17 @@
 #define LOTTO_H_
 
 #include <cstddef>
+#include <random>
 #include <vector>
+#include <algorithm>
 
 class Lotto
 {
+protected:
+  // Direkte Initialisierung, Kopierinitialisierung: std::size_t const MAX_LOTTOZAHLEN = 6;
+  std::size_t const MAX_LOTTOZAHLEN
+    { 6 };
+  std::vector<int> lottozahlen;
 
 public:
   Lotto ();                      // der Default-Konstruktor
@@ -20,18 +27,16 @@ public:
 //  Lotto (const Lotto& a);   // Copy-Konstruktor
   ~Lotto ();                     // der Destruktor
 
-  std::vector<int>
-  getLottozahlen ();     // eine Funktion mit einem (Default-) Parameter
+  auto
+  getLottozahlen () -> decltype(lottozahlen);
 
-  int
-  getZusatzzahl ();
+  auto
+  getZusatzzahl () -> int;
 
   void
   refresh ();
 
 private:
-  std::size_t const MAX_LOTTOZAHLEN = 6;
-  std::vector<int> lottozahlen;
 };
 
 #endif /* LOTTO_H_ */
