@@ -2,10 +2,10 @@
 <!-- Generated with glade 3.18.3 -->
 <interface>
   <requires lib="gtk+" version="3.12"/>
-  <object class="GtkAction" id="action1"/>
-  <object class="GtkAction" id="action2"/>
-  <object class="GtkApplicationWindow" id="applicationwindow1">
+  <object class="GtkWindow" id="mainWindow">
     <property name="can_focus">False</property>
+    <property name="default_width">500</property>
+    <property name="default_height">250</property>
     <child>
       <object class="GtkBox" id="box1">
         <property name="visible">True</property>
@@ -68,10 +68,10 @@
             <property name="row_homogeneous">True</property>
             <property name="column_homogeneous">True</property>
             <child>
-              <object class="GtkLabel" id="label1">
+              <object class="GtkLabel" id="label_6">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">9</property>
+                <property name="label" translatable="yes">42</property>
                 <property name="justify">fill</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
@@ -79,30 +79,31 @@
                 </attributes>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">1</property>
+                <property name="left_attach">5</property>
+                <property name="top_attach">0</property>
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label2">
+              <object class="GtkLabel" id="label_5">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">9</property>
+                <property name="label" translatable="yes">35</property>
+                <property name="justify">fill</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
                   <attribute name="scale" value="3"/>
                 </attributes>
               </object>
               <packing>
-                <property name="left_attach">0</property>
+                <property name="left_attach">4</property>
                 <property name="top_attach">0</property>
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label3">
+              <object class="GtkLabel" id="label_3">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">26</property>
+                <property name="label" translatable="yes">18</property>
                 <property name="justify">fill</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
@@ -115,7 +116,23 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label4">
+              <object class="GtkLabel" id="label_4">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">26</property>
+                <property name="justify">fill</property>
+                <attributes>
+                  <attribute name="weight" value="bold"/>
+                  <attribute name="scale" value="3"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label_2">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">12</property>
@@ -131,10 +148,10 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label5">
+              <object class="GtkLabel" id="label_1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">35</property>
+                <property name="label" translatable="yes">9</property>
                 <property name="justify">fill</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
@@ -142,15 +159,15 @@
                 </attributes>
               </object>
               <packing>
-                <property name="left_attach">3</property>
+                <property name="left_attach">0</property>
                 <property name="top_attach">0</property>
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label6">
+              <object class="GtkLabel" id="label_7">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">42</property>
+                <property name="label" translatable="yes">8</property>
                 <property name="justify">fill</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
@@ -158,24 +175,8 @@
                 </attributes>
               </object>
               <packing>
-                <property name="left_attach">4</property>
-                <property name="top_attach">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkLabel" id="label7">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">47</property>
-                <property name="justify">fill</property>
-                <attributes>
-                  <attribute name="weight" value="bold"/>
-                  <attribute name="scale" value="3"/>
-                </attributes>
-              </object>
-              <packing>
-                <property name="left_attach">5</property>
-                <property name="top_attach">0</property>
+                <property name="left_attach">0</property>
+                <property name="top_attach">1</property>
               </packing>
             </child>
             <child>
