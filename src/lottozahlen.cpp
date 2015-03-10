@@ -13,13 +13,11 @@
 
 #define UI_FILE "ui/main.glade"
 
-Gtk::Window* pWindow = 0;
-
 void
 fireValues (Glib::RefPtr<Gtk::Builder> refBuilder)
 {
-  Gtk::Label* pLabel = 0;
   Lotto lotto;
+  Gtk::Label* pLabel = 0;
   auto i = 0;
   for (auto value : lotto.getLottozahlen ())
     {
@@ -36,6 +34,7 @@ int
 main (int argc, char **argv)
 {
   Gtk::Main kit (argc, argv);
+
   Glib::RefPtr<Gtk::Builder> refBuilder = Gtk::Builder::create ();
   try
     {
@@ -59,6 +58,7 @@ main (int argc, char **argv)
 
   fireValues (refBuilder);
 
+  Gtk::Window* pWindow = 0;
   refBuilder->get_widget ("mainWindow", pWindow);
   kit.run (*pWindow);
 
