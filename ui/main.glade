@@ -68,10 +68,9 @@
             <property name="row_homogeneous">True</property>
             <property name="column_homogeneous">True</property>
             <child>
-              <object class="GtkLabel" id="label_6">
+              <object class="GtkLabel" id="lblZahl6">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">42</property>
                 <property name="justify">fill</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
@@ -84,10 +83,9 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label_5">
+              <object class="GtkLabel" id="lblZahl5">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">35</property>
                 <property name="justify">fill</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
@@ -100,10 +98,9 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label_3">
+              <object class="GtkLabel" id="lblZahl3">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">18</property>
                 <property name="justify">fill</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
@@ -116,10 +113,9 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label_4">
+              <object class="GtkLabel" id="lblZahl4">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">26</property>
                 <property name="justify">fill</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
@@ -132,10 +128,9 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label_2">
+              <object class="GtkLabel" id="lblZahl2">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">12</property>
                 <property name="justify">fill</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
@@ -148,10 +143,9 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label_1">
+              <object class="GtkLabel" id="lblZahl1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">9</property>
                 <property name="justify">fill</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
@@ -164,10 +158,9 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label_7">
+              <object class="GtkLabel" id="lblSuperzahl">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">8</property>
                 <property name="justify">fill</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>

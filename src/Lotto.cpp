@@ -71,7 +71,7 @@ Lotto::refresh ()
 }
 
 auto
-Lotto::getZusatzzahl ()-> decltype (dist0to9 (engine))
+Lotto::getSuperzahl ()-> decltype (dist0to9 (engine))
 {
   return (dist0to9 (engine));
 }

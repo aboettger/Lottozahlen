@@ -5,13 +5,8 @@
  *      Author: aboettger
  */
 
-#include <glibmm/fileutils.h>
-#include <glibmm/markup.h>
-#include <glibmm/refptr.h>
-#include <glibmm/ustring.h>
-#include <gtkmm/builder.h>
-#include <gtkmm/main.h>
-#include <gtkmm/window.h>
+#include <glibmm.h>
+#include <gtkmm.h>
 #include <iostream>
 
 #include "Lotto.h"
@@ -19,22 +14,27 @@
 #define UI_FILE "ui/main.glade"
 
 Gtk::Window* pWindow = 0;
-Gtk::Label* pLabel = 0;
+
+void
+fireValues (Glib::RefPtr<Gtk::Builder> refBuilder)
+{
+  Gtk::Label* pLabel = 0;
+  Lotto lotto;
+  auto i = 0;
+  for (auto value : lotto.getLottozahlen ())
+    {
+      refBuilder->get_widget ("lblZahl" + std::to_string (++i), pLabel);
+      pLabel->set_text (std::to_string (value));
+    }
+
+  auto superzahl = std::to_string (lotto.getSuperzahl ());
+  refBuilder->get_widget ("lblSuperzahl", pLabel);
+  pLabel->set_text (superzahl);
+}
 
 int
 main (int argc, char **argv)
 {
-  Lotto lotto;
-  std::cout << "Lottozahlen: ";
-  for (auto value : lotto.getLottozahlen ())
-    {
-      std::cout << value << " ";
-    }
-
-  std::cout << std::endl;
-
-  std::cout << "Zusatzzahl: " << lotto.getZusatzzahl ();
-
   Gtk::Main kit (argc, argv);
   Glib::RefPtr<Gtk::Builder> refBuilder = Gtk::Builder::create ();
   try
@@ -57,9 +57,9 @@ main (int argc, char **argv)
       return (1);
     }
 
-  refBuilder->get_widget ("mainWindow", pWindow);
-  refBuilder->get_widget ("label_1", pLabel);
+  fireValues (refBuilder);
 
+  refBuilder->get_widget ("mainWindow", pWindow);
   kit.run (*pWindow);
 
   return (0);
