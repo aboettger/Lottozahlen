@@ -5,13 +5,7 @@
   <object class="GtkApplicationWindow" id="applicationwindow1">
     <property name="can_focus">False</property>
     <child>
-      <object class="GtkViewport" id="viewport1">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <child>
-          <placeholder/>
-        </child>
-      </object>
+      <placeholder/>
     </child>
   </object>
 </interface>
