@@ -9,9 +9,7 @@
 #define LOTTO_H_
 
 #include <cstddef>
-#include <random>
 #include <vector>
-#include <algorithm>
 
 class Lotto
 {

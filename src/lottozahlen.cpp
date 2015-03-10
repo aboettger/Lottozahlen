@@ -5,9 +5,16 @@
  *      Author: aboettger
  */
 
-#include <glibmm.h>
-#include <gtkmm.h>
+#include <glibmm/fileutils.h>
+#include <glibmm/markup.h>
+#include <glibmm/refptr.h>
+#include <glibmm/ustring.h>
+#include <gtkmm/builder.h>
+#include <gtkmm/label.h>
+#include <gtkmm/main.h>
+#include <gtkmm/window.h>
 #include <iostream>
+#include <string>
 
 #include "Lotto.h"
 

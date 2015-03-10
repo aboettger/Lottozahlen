@@ -7,8 +7,9 @@
 
 #include "Lotto.h"
 
+#include <algorithm>
 #include <initializer_list>
-#include <iostream>
+#include <random>
 
 std::random_device rd;
 std::mt19937 engine (rd ());
