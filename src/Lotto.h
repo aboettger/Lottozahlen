@@ -31,7 +31,7 @@ public:
   getLottozahlen () -> decltype(lottozahlen);
 
   auto
-  getZusatzzahl () -> int;
+  getSuperzahl () -> int;
 
   void
   refresh ();
